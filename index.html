@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mariage - Recherche Invité</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>🔎 Recherche Invité</h2>
+    <input type="text" id="search" placeholder="Tapez une partie du nom…" autocomplete="off">
+    <div id="suggestions" class="suggestions"></div>
+    <div id="result" class="result"></div>
+    <a href="manage.html" class="button">⚙ Gérer la liste</a>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }
+  </script>
+</body>
+</html>

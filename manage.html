@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestion des invités</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>⚙ Gestion des invités</h2>
+    <p>Collez ou modifiez la liste (format : <code>Nom, Table</code> par ligne). Importez un CSV si besoin, puis cliquez sur « Enregistrer ».</p>
+    <textarea id="guestData" placeholder="Format : Nom, Table
+Jean Dupont, 12
+Marie Kalla, 5"></textarea>
+
+    <div class="actions">
+      <input type="file" id="csvFile" accept=".csv" />
+      <button onclick="importCSV()">📥 Importer CSV</button>
+      <button onclick="saveGuests()">💾 Enregistrer</button>
+      <button class="secondary" onclick="exportCSV()">📤 Exporter CSV</button>
+    </div>
+
+    <a href="index.html" class="button back">⬅ Retour</a>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }
+  </script>
+</body>
+</html>
